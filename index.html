@@ -1,42 +1,13 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>满江风雪 | Heropoo的博客</title>
-    <link rel="stylesheet" href="assets/css/app.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 <body>
-<header id="header">
-    <div class="title">
-        <p><a href="/" id="logo">满江风雪</a></p>
-        <p id="say">啦啦啦~</p>
-    </div>
-</header>
-
-<section id="main">
-    <article class="article">
-        <div class="cover">
-            <!--<img src="{{asset('upload/article/sg.jpg')}}" alt="" width="100%">-->
-        </div>
-        <div class="description">
-
-        </div>
-    </article>
-</section>
-
-<footer class="footer">
-    <p>
-        Copyright ©2017 {{$blog_name}} <br>
-        <a href="#">www.ioio.pw</a>
-    </p>
-</footer>
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script>
-    $(function(){
-        var height = document.body.clientHeight;
-        $("#header").css('height', height + 'px');
-    });
-</script>
 </body>
+<script>
+    var markdown = require("markdown").markdown;
+    console.log(markdown);
+</script>
 </html>
