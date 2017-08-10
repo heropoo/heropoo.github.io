@@ -1,0 +1,190 @@
+/***************rest******************/
+*{margin: 0;padding: 0}
+
+html,body{width: 100%;height: 100%;}
+
+body{
+    background-color: #fff;
+    font-family: "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 16px;
+    font-size: 100%;
+    color: #333;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+ul,ol li{
+    list-style: none;
+}
+
+
+/****************common*****************/
+.bcc{background-color: #ccc;}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+}
+/*********************************/
+
+#header{
+    margin-top: 2.5rem;
+}
+
+#header .text-logo{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#header .text-line{
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+#container{
+    margin-top: 2rem;
+}
+
+.nav{
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+}
+
+.nav ul li{
+    float: left;
+    padding: 1rem 0.75rem;
+}
+
+.main{
+    margin-top: 1rem;
+}
+
+.left-content{
+    width: 70%;
+}
+
+.article{
+    padding: 1rem;
+}
+
+.article-title{
+    font-weight: 500;
+    text-align: center;
+}
+
+.article-info{
+    margin-top: 1rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #999;
+}
+
+.article-content{
+    margin-top: 1rem;
+    padding: 0 .5rem;
+}
+
+.right-side{
+    width: 30%;
+}
+
+.search-box{
+    border: 1px solid #999;
+    height: 2.25rem;
+    line-height: 2rem;
+    width: 12.5rem;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+.search-box .search-kw{
+    margin-left: .5rem;
+    border: none;
+    outline:medium;
+    width: 10rem;
+}
+
+
+#footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 0;
+    border-top: 1px solid #333;
+    color: #333;
+}
+
+/*cellphone*/
+@media screen and (max-width:767px) {
+    .container{
+        width: 100%;
+    }
+
+    #header{
+        width: 100%;
+    }
+
+    .logo{
+        padding-left: 2.5rem;
+    }
+
+    #footer{
+        width: 100%;
+    }
+
+    .right-side{
+        display: none;
+    }
+    .left-content{
+        width: 100%;
+        float: none;
+    }
+}
+
+/*pad*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    #header{
+        width: 100%;
+    }
+
+    .logo{
+        padding-left: 2.5rem;
+    }
+
+    #footer{
+        width: 100%;
+    }
+}
+
+/*pc screen*/
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+}
+
+/*max screen*/
+@media screen and (min-width: 1201px) {
+    .container{
+        width: 1201px;
+    }
+}
+
