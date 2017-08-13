@@ -1,0 +1,33 @@
+{% include header.html %}
+<div id="header" class="container">
+    <div class="logo">
+        <h1 class="text-logo">满江风雪</h1>
+        <p class="text-line">我还是很喜欢你 像风走了八千里不问归期</p>
+    </div>
+</div>
+<div id="container" class="container">
+
+    {% include nav.html %}
+
+    <div class="main clearfix">
+        <div class="left-content fl">
+            <ul class="articles-list">
+                {% for post in site.posts %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="right-side fl bbc">
+            <div class="side-module">
+                <div class="search-box">
+                    <input type="text" name="kw" value="" class="search-kw" placeholder="来吧，输入你想找的">
+                    <a href="" type="button"><i class="fa fa-search" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include footer.html %}
