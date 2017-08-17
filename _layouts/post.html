@@ -12,7 +12,7 @@
     <div class="main clearfix">
         <div class="left-content fl">
             <h2 class="article-title">{{page.title}}</h2>
-            <div class="article-info">{% if page.author %}作者：{{page.author}}{% endif %} {% if page.author %}{% if page.from %}来源：<a href="{{page.from.link}}">{{page.from.name}}</a>{% endif %} 时间：{{page.date| date:"%Y-%m-%d %H:%M"}} {% if page.read_count %}阅读：{{page.read_count}}{% endif %}</div>
+            <div class="article-info">{% if page.author %}作者：{{page.author}}{% endif %} {% if page.from %}来源：<a href="{{page.from.link}}">{{page.from.name}}</a>{% endif %} 时间：{{page.date| date:"%Y-%m-%d %H:%M"}} {% if page.read_count %}阅读：{{page.read_count}}{% endif %}</div>
             <div class="article-content">
             {{ content }}
             </div>
