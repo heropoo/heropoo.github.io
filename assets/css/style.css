@@ -107,6 +107,12 @@ ul,ol li{
     padding: 0 .5rem;
     line-height: 1.5rem;
 }
+.article-content p{
+    margin: 0 1rem;
+}
+.article-content img{
+    max-width: 100%;
+}
 
 .right-side{
     width: 30%;
