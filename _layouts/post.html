@@ -1,31 +1,25 @@
-{% include header.html %}
-<div id="header" class="container">
-    <div class="logo">
-        <h1 class="text-logo">满江风雪</h1>
-        <p class="text-line">One word then,one smile,is enough. </p>
-    </div>
-</div>
-<div id="container" class="container">
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-    {% include nav.html %}
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        {{ page.date | date: date_format }}
+      </time>
+      {% if page.author %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}</p>
+  </header>
 
-    <div class="main clearfix">
-        <div class="left-content fl">
-            <h2 class="article-title">{{page.title}}</h2>
-            <div class="article-info">{% if page.author %}作者：{{page.author}}{% endif %} {% if page.from %}来源：<a href="{{page.from.link}}">{{page.from.name}}</a>{% endif %} 时间：{{page.date| date:"%Y-%m-%d %H:%M"}} {% if page.read_count %}阅读：{{page.read_count}}{% endif %}</div>
-            <div class="article-content">
-            {{ content }}
-            </div>
-        </div>
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
 
-        <div class="right-side fl bbc">
-            <div class="side-module">
-                <div class="search-box">
-                    <input type="text" name="kw" value="" class="search-kw" placeholder="来吧，输入你想找的">
-                    <a href="" type="button"><i class="fa fa-search" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% include footer.html %}
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>

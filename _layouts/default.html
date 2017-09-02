@@ -1,33 +1,20 @@
-{% include header.html %}
-<div id="header" class="container">
-    <div class="logo">
-        <h1 class="text-logo">满江风雪</h1>
-        <p class="text-line">One word then,one smile,is enough. </p>
-    </div>
-</div>
-<div id="container" class="container">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-    {% include nav.html %}
+  {% include head.html %}
 
-    <div class="main clearfix">
-        <div class="left-content fl">
-            <ul class="articles-list">
-                {% for post in site.posts %}
-                <li>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+  <body>
 
-        <div class="right-side fl bbc">
-            <div class="side-module">
-                <div class="search-box">
-                    <input type="text" name="kw" value="" class="search-kw" placeholder="来吧，输入你想找的">
-                    <a href="" type="button"><i class="fa fa-search" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% include footer.html %}
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

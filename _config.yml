@@ -13,25 +13,25 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "满江风雪 | Heropoo的个人博客"
-email: "aiyouyou1000@163.com"
-keywords: "满江风雪, Heropoo, www.ioio.pw, ioio.pw, ioio, 博客, Heropoo的个人博客"
+title: 满江风雪
+email: aiyouyou1000@163.com
 description: > # this means to ignore newlines until "baseurl:"
-  满江风雪，Heropoo的个人博客。
+  Heropoo的个人博客。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
-# Social account
-github_username:  "heropoo"
+twitter_username:
+github_username:  heropoo
 
 # Build settings
 markdown: kramdown
 #theme: minima
 plugins:
   - jekyll-feed
-sass:
-  style: compressed
+  - jekyll-seo-tag
 
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
