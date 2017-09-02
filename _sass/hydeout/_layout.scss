@@ -49,7 +49,7 @@ body {
 
     a {
       color: inherit;
-      &:hover { color: white; }
+      &:hover { color: white; text-decoration: none}
     }
 
     .back-arrow { margin-right: 0.5rem; }
@@ -117,6 +117,9 @@ body {
   .site-title {
     font-size: 3.25rem;
     color: white;
+    a:hover{
+      text-decoration: none;
+    }
   }
 
   // Show secondary nav content + lead
@@ -167,6 +170,9 @@ body {
 
       a { color: white; }
       .back-arrow { display: none; }
+      &:hover{
+        text-decoration: none;
+      }
     }
 
     p.lead, header ~ * {
