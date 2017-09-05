@@ -3,6 +3,10 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "3.5.2"
 
+#gem "json"
+#gem "bigdecimal"
+#gem 'wdm', '>= 0.1.0'
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"

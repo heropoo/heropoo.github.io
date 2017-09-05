@@ -8,7 +8,7 @@ Just a coder!
 
 To see me at [Github] [1].
 
-  [1]: https://github.com/{{ site.github_username }}        "Github"
+  [1]: {{ site.github.repo }}        "Github"
 
 ---
 
