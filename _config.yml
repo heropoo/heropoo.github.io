@@ -11,7 +11,7 @@ baseurl:          # the optional subpath of your site, e.g. "/blog"
 
 author:
   name:           Heropoo
-  url:
+  url:            http://www.ioio.pw
 
 paginate:         5
 
@@ -24,6 +24,9 @@ plugins:
 sass:
   sass_dir: _sass
   style: compressed
+
+disqus.
+  - shortname:    heropoo
 
 # Custom vars
 version:            1.0
