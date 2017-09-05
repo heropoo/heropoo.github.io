@@ -25,7 +25,7 @@ sass:
   sass_dir: _sass
   style: compressed
 
-disqus.
+disqus:
   - shortname:    heropoo
 
 # Custom vars
