@@ -22,11 +22,11 @@ plugins:
   - jekyll-seo-tag
 
 sass:
-  sass_dir: _sass
-  style: compressed
+  sass_dir:       _sass
+  style:          compressed
 
 disqus:
-  - shortname:    heropoo
+  shortname:      heropoo
 
 # Custom vars
 version:            1.0
