@@ -29,7 +29,7 @@ sass:
 # for `jekyll-seo-tag`
 logo:             favicon.png
 lang:             zh-CN 
-keywords:         www.ioio.pw, ioio.pw, ioio, 满江风雪, heropoo, Heropoo的个人博客
+keywords:         www.ioio.pw, ioio.pw, ioio, 满江风雪, heropoo, 个人博客, Heropoo的个人博客
 # Comments
 disqus:
   shortname:      heropoo
