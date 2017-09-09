@@ -3,9 +3,9 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "3.5.2"
 
-#gem "listen", "~> 3.0"
-#gem "json"
-#gem "bigdecimal"
+gem "listen", "~> 3.0"
+gem "json"
+gem "bigdecimal"
 #gem 'wdm', '>= 0.1.0'
 
 # If you have any plugins, put them here!
