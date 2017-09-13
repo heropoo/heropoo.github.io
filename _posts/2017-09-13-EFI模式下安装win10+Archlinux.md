@@ -23,7 +23,7 @@ Win10安装就略过了，我的电脑linux老换，win10始终稳稳的在那�
 插上u盘，重启到liveCD里面。里面也是个没桌面的shell系统。
 
 ### 看Archlinux wiki
-在开始之前最好还是看看[arch的wiki](https://wiki.archlinux.org/index.php/Installation_guide)，写的很详细，最好看英文的，中文的翻译有点延迟。
+在开始之前最好还是看看[arch的wiki](https://wiki.archlinux.org/index.php/Installation_guide)Installation guide(安装指南)，写的很详细，最好看英文的，中文的翻译有点延迟。
 
 ### 联网
 如果你是有线网络，插上网线，启动[dhcpd](https://wiki.archlinux.org/index.php/Dhcpcd)服务（也就是动态获取ip）
@@ -118,7 +118,7 @@ vim /etc/locale.gen     # 区域设置 取消英文（en_US.UTF-8）和中文(zh
 locale-gen      #生成设置区域设置
 echo "LANG=en_US.UTF-8" > /etc/locale.conf #设置语言，因为先安装的是没桌面的模式，先用英文，中文会显示成小方块
 ```
- 创建初始内存盘
+ 创建初始内存盘[mkinitcpio](https://wiki.archlinux.org/index.php/Mkinitcpio)
 ```
 mkinitcpio -p linux  
 ```
@@ -127,6 +127,7 @@ mkinitcpio -p linux
 passwd      
 ```
 这步忘了，你就进不去系统了，╮(╯▽╰)╭
+
 搞定启动项：
 ```
 pacman -S grub efibootmgr       #安装grub efibootmgr管理启动项
