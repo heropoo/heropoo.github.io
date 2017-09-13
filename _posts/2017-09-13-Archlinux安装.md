@@ -117,8 +117,18 @@ timedatectl set-ntp true        # 设置时间ntp同步网络时间
 vim /etc/locale.gen     # 区域设置 取消英文（en_US.UTF-8）和中文(zh_CN.UTF-8)的注释
 locale-gen      #生成设置区域设置
 echo "LANG=en_US.UTF-8" > /etc/locale.conf #设置语言，因为先安装的是没桌面的模式，先用英文，中文会显示成小方块
-mkinitcpio -p linux   #创建初始内存盘
-passwd      #设置root密码
+```
+ #创建初始内存盘
+```
+mkinitcpio -p linux  
+```
+#设置root密码
+```
+passwd      
+```
+这步忘了，你就进不去系统了，╮(╯▽╰)╭
+搞定启动项：
+```
 pacman -S grub efibootmgr       #安装grub efibootmgr管理启动项
 grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=arch_grub --recheck
 pacman -S os-prober     #安装这个包是为了让grub-mkconfig发现win10的启动项
@@ -126,7 +136,7 @@ grub-mkconfig -o /boot/grub/grub.cfg   #把启动项写到文件配置里
 ```
 如果win10的启动项没有被发现，不要着急，在新的系统安装重启之后，重新执行上面`grub-mkconfig`命令就行了
 
-退出新系统，
+退出新系统,重启
 ```
 exit        #退出
 unmout -R /mnt  #取消挂载磁盘
