@@ -118,11 +118,11 @@ vim /etc/locale.gen     # 区域设置 取消英文（en_US.UTF-8）和中文(zh
 locale-gen      #生成设置区域设置
 echo "LANG=en_US.UTF-8" > /etc/locale.conf #设置语言，因为先安装的是没桌面的模式，先用英文，中文会显示成小方块
 ```
- #创建初始内存盘
+ 创建初始内存盘
 ```
 mkinitcpio -p linux  
 ```
-#设置root密码
+设置root密码
 ```
 passwd      
 ```
