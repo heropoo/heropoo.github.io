@@ -1,6 +1,13 @@
+init-site:
+    command: bundle update
+    image: jekyll/jekyll:pages
+    volumes:
+        - ./:/srv/jekyll
+        - ./vendor/bundle:/usr/local/bundle
 site:
-    command: jekyll serve --watch
-    image: jekyll/jekyll:latest
+    command: jekyll serve --watch --incremental
+    #image: jekyll/jekyll:latest
+    image: jekyll/jekyll:pages
     volumes:
         - ./:/srv/jekyll
         - ./vendor/bundle:/usr/local/bundle
