@@ -10,6 +10,8 @@ description:      "满江风雪，Heropoo的个人博客。"
 url:              http://www.ioio.pw
 baseurl:          # the optional subpath of your site, e.g. "/blog"
 
+timezone:         '+0800'
+
 author:
   name:           Heropoo
   url:            http://www.ioio.pw
