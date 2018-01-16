@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "EFI模式下安装win10+Archlinux"
-date:   2017-09-13 22:49:50 +0800
+date:   2017-09-13 22:49:50
 author: "Heropoo"
 categories: 
     - Linux
