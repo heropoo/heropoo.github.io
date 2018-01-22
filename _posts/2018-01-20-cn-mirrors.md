@@ -43,4 +43,4 @@ excerpt: "整理几个常用的国内源"
 * DaoCloud [http://a42abd64.m.daocloud.io](http://a42abd64.m.daocloud.io)
 * 阿里云 要注册独立分配 [传送门](https://yq.aliyun.com/articles/29941)
 
-大概就整理这么多了，至于各个镜像的更换方法大家自行更具自行百度吧~
+大概就整理这么多了，至于各个镜像的更换方法大家根据自己的应用自行百度吧~
