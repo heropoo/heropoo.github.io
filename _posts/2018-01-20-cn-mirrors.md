@@ -7,8 +7,8 @@ categories:
     - 资源
 tags:
     - Linux
-    - js
-    - php
+    - JavaScript
+    - PHP
     - docker
 excerpt: "整理几个常用的国内源"
 ---
