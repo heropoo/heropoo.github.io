@@ -18,7 +18,7 @@ excerpt: "现在开发项目大多使用git作为版本控制器，而且现在�
 比如你的项目有两个分支，一个是代码已经经过测试可用于部署到服务器的master分支，一个用于开发的dev分支。那么我们上线的过程就是merge dev的代码到master分支。那么我们可以设置一个代码push触发的webhook。这个webhook脚本的代码也非常简单，就是`git pull origin master`。
 
 ### 最简单的实现
-1. 编写`webhook.php`
+* 编写`webhook.php`
 
 ```
 <?php
@@ -57,7 +57,7 @@ if (is_resource($process)) {
 }
 ```
 
-2. 添加php脚本的执行用户sudoers中
+* 添加php脚本的执行用户sudoers中
 
 比如你使用nginx+php-fpm的服务器架构，你的php-fpm的用户是www-data
 ```
@@ -68,4 +68,4 @@ visudo
 www-data ALL=(ALL:ALL) NOPASSWD: /usr/bin/git
 ```
 
-3. push代码到master分支测试下吧~ 登陆服务器看看代码是不是已经同步好了　
+* push代码到master分支测试下吧~ 登陆服务器看看代码是不是已经同步好了　
