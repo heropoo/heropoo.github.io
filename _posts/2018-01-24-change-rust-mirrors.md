@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "rust更换国内源"
+title:  "Rust更换国内源"
 date:   2018-01-24 23:25:36
 author: "Heropoo"
 categories: 
-    - rust
+    - Rust
 tags:
-    - rust
+    - Rust
 excerpt: "今天学cargo这节，cargo build 时安装外部依赖真的慢啊。果断找国内源"
 ---
 今天学cargo这节，`cargo build`时安装外部依赖真的慢啊。果断找国内源,果断又是ustc(中科大, emmm以前应该努力一点考中科大~(￣▽￣)~\*)
