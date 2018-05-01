@@ -4,12 +4,12 @@ title:  "使用docker玩转php开发环境"
 date:   2017-11-16 15:25:01
 author: "Heropoo"
 categories: 
-    - docker
+    - Docker
     - PHP
 tags:
     - 虚拟化
     - 容器
-    - docker
+    - Docker
     - PHP
 excerpt: "还是忙里偷闲研究了下怎么用docker这个东东来整php开发。"
 ---
