@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "使用PHP写git的自动部署webhook脚本"
+title:  "使用PHP写Git的自动部署webhook脚本"
 date:   2018-05-01 10:16:43
 author: "Heropoo"
 categories: 
