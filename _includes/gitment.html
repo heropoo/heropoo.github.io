@@ -3,15 +3,20 @@
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-var gitment = new Gitment({
-  id: '{{ page.date }}', // 可选。默认为 location.href
-  owner: 'heropoo',
-  repo: 'heropoo.github.io',
-  oauth: {
-    client_id: 'c430d2eaf44b83c81702',
-    client_secret: '591a53878ed700de0b2bc1bc06d8e16e44ded19d',
-  },
-})
-gitment.render('container')
+	var page_date = '{{ page.date }}';
+	var id = window.location.href;
+	if(page_date > '2018-04-31 00:00:00 +0000'){
+		id = page_date;
+	}
+	var gitment = new Gitment({
+  		id: id, // 可选。默认为 location.href
+  		owner: 'heropoo',
+  		repo: 'heropoo.github.io',
+  		oauth: {
+    		client_id: 'c430d2eaf44b83c81702',
+    		client_secret: '591a53878ed700de0b2bc1bc06d8e16e44ded19d',
+  		},
+	});
+	gitment.render('container');
 </script>
 <!-- end gitment -->
