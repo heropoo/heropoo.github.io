@@ -22,7 +22,8 @@ sidebar_link: true
 </style>
 <ul style="margin: 10px;" class="link-list">
     <li><a href="http://friday-go.cc" target="_blank" title="南丞嘚吧嘚"><img src="/assets/images/nancheng.ico" alt="南丞嘚吧嘚"> &nbsp;<span>南丞嘚吧嘚</span></a></li>	
-    <li><a href="http://animtv.cn/" target="_blank" title="牧漫"><img src="/assets/images/muma.png" alt="牧漫"> &nbsp;<span>牧漫</span></a></li>	
+    <li><a href="http://animtv.cn/" target="_blank" title="牧漫"><img src="/assets/images/muma.png" alt="牧漫"> &nbsp;<span>牧漫</span></a></li>  
+    <li><a href="http://zhongguose.com/" target="_blank" title="中国色"><img src="http://zhongguose.com/img/favicon.ico" alt="中国色"> &nbsp;<span>中国色</span></a></li>	
 </ul>
 
 
