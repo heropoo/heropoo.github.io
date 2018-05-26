@@ -14,14 +14,14 @@ excerpt: "今天学cargo这节，cargo build 时安装外部依赖真的慢啊�
 教程开始：
 
 设置两个环境变量
-```bash
+```sh
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 ```
 或者直接写入`~/.bashrc`
 
 使用ustcu的源下载安装rust
-```
+```sh
 curl -sSf https://mirrors.ustc.edu.cn/rust-static/rustup.sh | sh
 ```
 编辑`~/.cargo/config`写入

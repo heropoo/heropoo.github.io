@@ -28,12 +28,12 @@ RUN docker-php-ext-install pdo pdo_mysql mysqli
 ```
 
 #### 构建
-```
+```sh
 docker build -t heropoo/php-cli-alpine .  #先切换到你的Dockerfile目录
 ```
 
 #### 运行
-```
+```sh
 docker run -it --rm --name php-cli-server -p 8080:80  -v //c/Users/ttt/www:/usr/src/www -w /usr/src/www php:7.0-cli-alpine php -S 0.0.0.0:80
 ```
 这句好长啊，解释下各个参数：
