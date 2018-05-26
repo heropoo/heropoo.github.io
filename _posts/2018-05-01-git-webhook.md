@@ -60,7 +60,7 @@ if (is_resource($process)) {
 * 添加php脚本的执行用户sudoers中
 
 比如你使用nginx+php-fpm的服务器架构，你的php-fpm的用户是www-data
-```
+```sh
 visudo
 --------------------------------
 ...
