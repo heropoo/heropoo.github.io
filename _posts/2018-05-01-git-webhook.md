@@ -64,7 +64,7 @@ if (is_resource($process)) {
 visudo
 --------------------------------
 ...
-
+#Defaults   !visiblepw   #注释掉这句 这句是限制sudo只能在命令行执行的
 www-data ALL=(ALL:ALL) NOPASSWD: /usr/bin/git
 ```
 
