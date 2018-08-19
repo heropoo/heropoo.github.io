@@ -7,15 +7,15 @@ title:            "满江风雪"
 tagline:          "Heropoo的个人博客"
 say_something:    "时光漫漫，何妨扬眉淡笑，心境从容？"
 description:      "满江风雪，Heropoo的个人博客。"
-url:              http://ioio.pw
+url:              http://www.ioio.pw
 baseurl:          # the optional subpath of your site, e.g. "/blog"
-domain:           ioio.pw
+domain:           www.ioio.pw
 
 timezone:         '+0800'
 
 author:
   name:           Heropoo
-  url:            http://ioio.pw
+  url:            http://www.ioio.pw
 
 paginate:         5
 
