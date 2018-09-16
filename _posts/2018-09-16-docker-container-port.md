@@ -13,6 +13,11 @@ excerpt: "给一个已经在运行的docker容器添加端口"
 ---
 突然遇到一个问题怎么给一个已经在运行的docker容器添加端口，找了找资料，记个笔记。
 
+参考：
+* [怎么给运行中的docker容器添加新的端口](https://blog.csdn.net/zuoshenglo/article/details/78402772)
+* [修改docker容器端口映射的方法](https://blog.csdn.net/wesleyflagon/article/details/78961990)
+* [iptable规则查看，添加，删除和修改](https://blog.csdn.net/xfks55/article/details/50148389)
+
 ## 方法1
 > docker的端口映射并不是在docker技术中实现的，而是通过宿主机的iptables来实现。通过控制网桥来做端口映射，类似路由器中设置路由端口映射。
 
@@ -51,4 +56,6 @@ sudo iptables -t nat -vnL DOCKER
 ```sh
 sudo iptables -t nat -D DOCKER 3
 ```
+
+(未完待续)
 
