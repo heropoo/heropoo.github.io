@@ -38,6 +38,7 @@ excerpt: "整理几个常用的国内源"
 
 ### php composer
 * Composer中文网 [http://www.phpcomposer.com/](http://www.phpcomposer.com/)
+* LaravelChina社区提供的镜像地址： https://packagist.laravel-china.org
 
 ### Docker
 * DaoCloud [http://a42abd64.m.daocloud.io](http://a42abd64.m.daocloud.io)

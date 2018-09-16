@@ -31,4 +31,4 @@ set http_proxy=127.0.0.1:1080
 > * Composer中文网提供的镜像地址： https://packagist.phpcomposer.com
 > * LaravelChina社区提供的镜像地址： https://packagist.laravel-china.org
 
-镜像使用方法，请参考这里 https://pkg.phpcomposer.com/#how-to-use-packagist-mirror
+镜像使用方法，请参考这里 [https://pkg.phpcomposer.com/#how-to-use-packagist-mirror](https://pkg.phpcomposer.com/#how-to-use-packagist-mirror)
