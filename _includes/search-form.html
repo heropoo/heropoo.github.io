@@ -1,6 +1,6 @@
 <form action="https://bing.com/search" class="search-form" id="searchForm">
   <div class="search-row">
-    <input id="search-bar" type="text" name="q" required />
+    <input id="search-bar" type="search" name="q" required />
 
     {% comment %}
       Hacky strip of protocol to the sitesearch value we pass to Google
@@ -9,7 +9,7 @@
     {% assign url = url | replace_first: 'http://', '' %}
     {% assign url = url | replace_first: 'spdy://', '' %}
     {% assign url = url | replace_first: '//', '' %}
-    <input name="sitesearch" type="hidden" value="{{ url }}{{ site.baseurl }}" />
+    <input name="sitesearch" type="hidden" id="sitesearch" value="{{ url }}{{ site.baseurl }}" />
 
     <input type="submit" value="Search" />
   </div>
@@ -18,8 +18,8 @@
   var searchForm = document.getElementById('searchForm');
   searchForm.onsubmit = function(){
     var url = this.action;
-    var q = this.children['q'].value;
-    var site = this.children['sitesearch'].value;
+    var q = this.getElementById('search-bar').value;
+    var site = this.getElementById('sitesearch').value;
     var url = url + '?q='+q+' site:'+ site;
     window.open(url);
     return false;
