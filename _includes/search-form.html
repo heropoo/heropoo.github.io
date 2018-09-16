@@ -1,4 +1,4 @@
-<form action="https://google.com/search" class="search-form">
+<form action="https://bing.com/search" class="search-form" id="searchForm">
   <div class="search-row">
     <input id="search-bar" type="search" name="q" />
 
@@ -9,9 +9,19 @@
     {% assign url = url | replace_first: 'http://', '' %}
     {% assign url = url | replace_first: 'spdy://', '' %}
     {% assign url = url | replace_first: '//', '' %}
-    <input name="sitesearch" type="hidden"
-           value="{{ url }}{{ site.baseurl }}" />
+    <input name="sitesearch" type="hidden" value="{{ url }}{{ site.baseurl }}" />
 
     <input type="submit" value="Search" />
   </div>
 </form>
+<script type="text/javascript">
+  var searchForm = document.getElementById('searchForm');
+  searchForm.onsubmit = function(){
+    var url = this.action;
+    var q = this.children['q'].value;
+    var site = this.children['sitesearch'].value;
+    var url = url + '?q='+q+' site:'+ site;
+    window.open(url);
+    return false;
+  };
+</script>>
