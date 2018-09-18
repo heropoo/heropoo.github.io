@@ -18,7 +18,7 @@ excerpt: "给一个已经在运行的docker容器添加端口"
 * [修改docker容器端口映射的方法](https://blog.csdn.net/wesleyflagon/article/details/78961990)
 * [iptable规则查看，添加，删除和修改](https://blog.csdn.net/xfks55/article/details/50148389)
 
-## 方法1
+## 方法1 修改iptables端口映射
 > docker的端口映射并不是在docker技术中实现的，而是通过宿主机的iptables来实现。通过控制网桥来做端口映射，类似路由器中设置路由端口映射。
 
 比如我们有一个容器的80端口映射到主机的8080端口，先查看iptables到底设置了什么规则：
@@ -56,6 +56,9 @@ sudo iptables -t nat -vnL DOCKER
 ```sh
 sudo iptables -t nat -D DOCKER 3
 ```
+
+### 方法2 修改容器配置文件
+容器的配置文件`/var/lib/docker/containers/[containerId]`目录下，`hostconfig.json`和`config.v2.json`
 
 (未完待续)
 
