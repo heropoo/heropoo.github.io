@@ -28,7 +28,26 @@ set http_proxy=127.0.0.1:1080
 这样就可以了，愉快的下载各种包吧~
 
 ### 使用国内镜像地址
-> * Composer中文网提供的镜像地址： https://packagist.phpcomposer.com
+> * cnpkg提供的镜像地址： https://php.cnpkg.org
 > * LaravelChina社区提供的镜像地址： https://packagist.laravel-china.org
+> * Composer中文网提供的镜像地址： https://packagist.phpcomposer.com
 
-镜像使用方法，请参考这里 [https://pkg.phpcomposer.com/#how-to-use-packagist-mirror](https://pkg.phpcomposer.com/#how-to-use-packagist-mirror)
+镜像使用方法:
+
+全局配置（推荐）:
+```
+composer config -g repo.packagist composer https://php.cnpkg.org
+```
+
+单独项目使用：
+```
+composer config repo.packagist composer https://php.cnpkg.org
+```
+
+取消镜像：
+```
+composer config -g --unset repos.packagist
+```
+
+---- 最后更新时间： 2018-10-16 18:55:18
+
