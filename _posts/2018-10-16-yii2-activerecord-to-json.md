@@ -30,29 +30,30 @@ class User extends ActiveRecord implements \JsonSerializable{
 
 但是后来代码写完了，觉得这个框架应该提供了这个问题的解决方法了吧。然后找了找，果然有的： `\yii\helpers\BaseJson::encode($user)`。然后翻了翻源代码，部分代码是这样的：
 ```php
-		if (is_object($data)) {
-            if ($data instanceof JsExpression) {
-                $token = "!{[$expPrefix=" . count($expressions) . ']}!';
-                $expressions['"' . $token . '"'] = $data->expression;
+//from \yii\helpers\BaseJson::processData
+if (is_object($data)) {
+    if ($data instanceof JsExpression) {
+        $token = "!{[$expPrefix=" . count($expressions) . ']}!';
+        $expressions['"' . $token . '"'] = $data->expression;
 
-                return $token;
-            } elseif ($data instanceof \JsonSerializable) {
-                $data = $data->jsonSerialize();
-            } elseif ($data instanceof Arrayable) {				// <-----
-                $data = $data->toArray();
-            } elseif ($data instanceof \SimpleXMLElement) {
-                $data = (array) $data;
-            } else {
-                $result = [];
-                foreach ($data as $name => $value) {
-                    $result[$name] = $value;
-                }
-                $data = $result;
-            }
-
-            if ($data === []) {
-                return new \stdClass();
-            }
+        return $token;
+    } elseif ($data instanceof \JsonSerializable) {
+        $data = $data->jsonSerialize();
+    } elseif ($data instanceof Arrayable) {				// <-----
+        $data = $data->toArray();
+    } elseif ($data instanceof \SimpleXMLElement) {
+        $data = (array) $data;
+    } else {
+        $result = [];
+        foreach ($data as $name => $value) {
+            $result[$name] = $value;
         }
+        $data = $result;
+    }
+
+    if ($data === []) {
+        return new \stdClass();
+    }
+}
 ```
 作者在处理数据的时候做了判断，`ActiveRecord`类接了`Arrayable`接口，然后作者也是使用`toArray()`方法。然后我觉得放心了。我的改造也没有错。当然了使用框架提供的方法更简单点。
