@@ -39,7 +39,7 @@ if (is_object($data)) {
         return $token;
     } elseif ($data instanceof \JsonSerializable) {
         $data = $data->jsonSerialize();
-    } elseif ($data instanceof Arrayable) {	// <-----
+    } elseif ($data instanceof Arrayable) { // <---here
         $data = $data->toArray();
     } elseif ($data instanceof \SimpleXMLElement) {
         $data = (array) $data;
