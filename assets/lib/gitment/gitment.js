@@ -125,7 +125,7 @@ var Gitment = function () {
 
       this.state.user.isLoggingIn = true;
       //http.post('https://gh-oauth.imsun.net', {
-      _utils.http.post('https://auth.baixiaotu.cc', {
+      _utils.http.post('http://gh-oauth.t.wulic.com', {
         code: code,
         client_id: client_id,
         client_secret: client_secret
