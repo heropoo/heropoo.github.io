@@ -17,7 +17,7 @@ author:
   name:           Heropoo
   url:            http://www.ioio.pw
 
-paginate:         5
+paginate:         15
 
 plugins:
   - jekyll-feed
