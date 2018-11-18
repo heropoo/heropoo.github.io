@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Happy Jekylling!
-gem "jekyll", "3.5.2"
+gem "jekyll", ">= 3.6.3"
 
 gem "listen", "~> 3.0"
 gem "json"
