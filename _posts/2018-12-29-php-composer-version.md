@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "关于PHP Composer 版本号前置~与^符号的区别"
+title:  "关于PHP Composer 版本号前置~与^符号的区别(转)"
 date:   2018-12-29 15:14:57
 author: "heropoo"
 categories: 
