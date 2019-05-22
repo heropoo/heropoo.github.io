@@ -14,42 +14,42 @@ excerpt: "常用nginx配置整理"
 ## php web项目配置
 ```
 server {
-	listen 80;
-	listen [::]:80;
+  listen 80;
+  listen [::]:80;
 
   # 设置上传最大为5MB
   client_max_body_size 5m;
 
-	root /srv/www/wechat/public;
+  root /srv/www/wechat/public;
 
-	index index.html index.php;
+  index index.html index.php;
 
-	server_name example.com;
+  server_name example.com;
 
-	location / {
-		try_files $uri $uri/ =404;
-	}
+  location / {
+    try_files $uri $uri/ =404;
+  }
 
   # 支持php
-	location ~ \.php$ {
+  location ~ \.php$ {
     # Check that the PHP script exists before passing it
     try_files $fastcgi_script_name =404;
 
     fastcgi_index index.php;
     include fastcgi.conf;
 
-		# With php-fpm (or other unix sockets):
-		fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
-  	#	# With php-cgi (or other tcp sockets):
-	  #	fastcgi_pass 127.0.0.1:9000;
+    # With php-fpm (or other unix sockets):
+    fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+    #  # With php-cgi (or other tcp sockets):
+    #  fastcgi_pass 127.0.0.1:9000;
   }
 
-	# deny access to .htaccess files, if Apache's document root
-	# concurs with nginx's one
-	#
-	location ~ /\.ht {
-		deny all;
-	}
+  # deny access to .htaccess files, if Apache's document root
+  # concurs with nginx's one
+  #
+  location ~ /\.ht {
+    deny all;
+  }
 }
 ```
 
@@ -68,8 +68,8 @@ server {
 ## php web项目配置 支持ThinkPHP
 ```
 ...
-	location ~ \.php$ {
-		# regex to split $uri to $fastcgi_script_name and $fastcgi_path
+  location ~ \.php$ {
+    # regex to split $uri to $fastcgi_script_name and $fastcgi_path
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
 
     # Check that the PHP script exists before passing it
@@ -83,10 +83,10 @@ server {
     fastcgi_index index.php;
     include fastcgi.conf;
 
-		# With php-fpm (or other unix sockets):
-		fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
-	  #	# With php-cgi (or other tcp sockets):
-	  #	fastcgi_pass 127.0.0.1:9000;
+    # With php-fpm (or other unix sockets):
+    fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+    #  # With php-cgi (or other tcp sockets):
+    #  fastcgi_pass 127.0.0.1:9000;
   }
 ...
 ```
