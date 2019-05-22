@@ -87,7 +87,7 @@ server {
 ## php web项目配置 支持ThinkPHP
 ```
 ...
-	# pass PHP scripts to FastCGI server
+  # pass PHP scripts to FastCGI server
 	#
 	location ~ \.php$ {
 		# regex to split $uri to $fastcgi_script_name and $fastcgi_path
@@ -120,6 +120,7 @@ server {
     #deny all;  # 返回403
     return 404; #返回404
   }
+...
 ```
 
 
