@@ -4,12 +4,13 @@ title:  "关于大文件上传"
 date:   2019-05-23 10:06:28
 author: "Heropoo"
 categories: 
-    - javascript
-    - php
+    - JavaScript
+    - PHP
 tags:
-    - javascript
-    - html5
-    - php
+    - JavaScript
+    - HTML5
+    - AJAX 
+    - PHP
 excerpt: "最近做视频上传，我们使用切片上传大文件"
 ---
 最近在做视频上传，我们使用切片上传大文件，做个笔记。
