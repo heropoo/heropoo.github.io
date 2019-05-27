@@ -1,7 +1,6 @@
 ---
 layout: page
 title: 关于test我
-sidebar_link: true
 ---
 
 ## K-means
