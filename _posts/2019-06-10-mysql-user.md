@@ -178,6 +178,7 @@ mysql> desc user;
     ```
 
     * 在未登录mysql的情况下用mysqladmin命令修改密码
+    
     ```
     $ mysqladmin -uroot -p123456root password 123321
     ```
