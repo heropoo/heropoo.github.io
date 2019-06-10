@@ -88,115 +88,116 @@ mysql> desc user;
 
 我们用几个例子来说明吧：
 
-1. 创建用户tom，权限为可以在所有数据库上执行所有权限，只能从本地进行连接。
-```
-mysql> GRANT ALL PRIVILEGES ON *.* TO tom@localhost IDENTIFIED BY 'tompassword' WITH GRANT OPTION;
-```
-如果你执行这个语句碰到以下错误：`ERROR 1819 (HY000): Your password does not satisfy the current policy requirements`。这个是密码策略的问题，请设置比较复杂的密码，或者修改密码策略，这里就不详细说了。
+1. 创建用户
 
-GRANT命令说明：
-    * `ALL PRIVILEGES`是表示所有权限，你也可以使用select、update等权限。
-
-    * `ON`用来指定权限针对哪些库和表，格式是`数据库名.表名`，这里`*.*`表示所有数据库和所有表。
-
-    * `TO` 表示将权限赋予某个用户。`tom@localhost`，表示`tom`用户，`@`后面接限制的主机，可以是`IP`、`IP段`、`域名`以及`%`，`%`表示任何地方。注意：这里%有的版本不包括本地，以前碰到过给某个用户设置了%允许任何地方登录，但是在本地登录不了，这个和版本有关系，遇到这个问题再加一个localhost的用户就可以了。
-
-    * `IDENTIFIED BY` 指定用户的登录密码， 这里`'tompassword'`就是用户tom的密码。
-
-    * `WITH GRANT OPTION` 这个选项表示该用户可以将自己拥有的权限授权给别人。注意：经常有人在创建操作用户的时候不指定WITH GRANT OPTION选项导致后来该用户不能使用GRANT命令创建用户或者给其它用户授权。
-
-备注：可以使用`GRANT`重复给用户添加权限，权限叠加，比如你先给用户添加一个select权限，然后又给用户添加一个insert权限，那么该用户就同时拥有了select和insert权限。
-
-使用`GRANT`操作用户权限之后，再使用`FLUSH PRIVILEGES`命令来刷新权限使其立即生效
-```
-mysql> FLUSH PRIVILEGES;
-Query OK, 0 rows affected (0.00 sec)
-```
+    创建用户tom，权限为可以在所有数据库上执行所有权限，只能从本地进行连接。
+    ```
+    mysql> GRANT ALL PRIVILEGES ON *.* TO tom@localhost IDENTIFIED BY 'tompassword' WITH GRANT OPTION;
+    ```
+    如果你执行这个语句碰到以下错误：`ERROR 1819 (HY000): Your password does not satisfy the current policy requirements`。这个是密码策略的问题，请设置比较复杂的密码，或者修改密码策略，这里就不详细说了。
+    
+    GRANT命令说明：
+        * `ALL PRIVILEGES`是表示所有权限，你也可以使用select、update等权限。
+    
+        * `ON`用来指定权限针对哪些库和表，格式是`数据库名.表名`，这里`*.*`表示所有数据库和所有表。
+    
+        * `TO` 表示将权限赋予某个用户。`tom@localhost`，表示`tom`用户，`@`后面接限制的主机，可以是`IP`、`IP段`、`域名`以及`%`，`%`表示任何地方。注意：这里%有的版本不包括本地，以前碰到过给某个用户设置了%允许任何地方登录，但是在本地登录不了，这个和版本有关系，遇到这个问题再加一个localhost的用户就可以了。
+    
+        * `IDENTIFIED BY` 指定用户的登录密码， 这里`'tompassword'`就是用户tom的密码。
+    
+        * `WITH GRANT OPTION` 这个选项表示该用户可以将自己拥有的权限授权给别人。注意：经常有人在创建操作用户的时候不指定WITH GRANT OPTION选项导致后来该用户不能使用GRANT命令创建用户或者给其它用户授权。
+    
+    备注：可以使用`GRANT`重复给用户添加权限，权限叠加，比如你先给用户添加一个select权限，然后又给用户添加一个insert权限，那么该用户就同时拥有了select和insert权限。
+    
+    使用`GRANT`操作用户权限之后，再使用`FLUSH PRIVILEGES`命令来刷新权限使其立即生效
+    ```
+    mysql> FLUSH PRIVILEGES;
+    Query OK, 0 rows affected (0.00 sec)
+    ```
 
 2. 查看用户的权限
 
-直接使用`SHOW GRANTS`默认查看`root@localhost`的权限
-```
-mysql> SHOW GRANTS;
-+---------------------------------------------------------------------+
-| Grants for root@localhost                                           |
-+---------------------------------------------------------------------+
-| GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION |
-| GRANT PROXY ON ''@'' TO 'root'@'localhost' WITH GRANT OPTION        |
-+---------------------------------------------------------------------+
-2 rows in set (0.01 sec)
-```
-
-查看某个用户的权限
-```
-mysql> SHOW GRANTS FOR tom@localhost;
-+----------------------------------------------------------------------+
-| Grants for tom@localhost                                           |
-+----------------------------------------------------------------------+
-| GRANT ALL PRIVILEGES ON *.* TO 'tom'@'localhost' WITH GRANT OPTION |
-+----------------------------------------------------------------------+
-1 row in set (0.00 sec)
-```
+    直接使用`SHOW GRANTS`默认查看`root@localhost`的权限
+    ```
+    mysql> SHOW GRANTS;
+    +---------------------------------------------------------------------+
+    | Grants for root@localhost                                           |
+    +---------------------------------------------------------------------+
+    | GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION |
+    | GRANT PROXY ON ''@'' TO 'root'@'localhost' WITH GRANT OPTION        |
+    +---------------------------------------------------------------------+
+    2 rows in set (0.01 sec)
+    ```
+    
+    查看某个用户的权限
+    ```
+    mysql> SHOW GRANTS FOR tom@localhost;
+    +----------------------------------------------------------------------+
+    | Grants for tom@localhost                                           |
+    +----------------------------------------------------------------------+
+    | GRANT ALL PRIVILEGES ON *.* TO 'tom'@'localhost' WITH GRANT OPTION |
+    +----------------------------------------------------------------------+
+    1 row in set (0.00 sec)
+    ```
 
 3. 收回权限
-```
-mysql> REVOKE DELETE ON *.* FROM 'tom'@'localhost';
-Query OK, 0 rows affected (0.00 sec)
-```
+    ```
+    mysql> REVOKE DELETE ON *.* FROM 'tom'@'localhost';
+    Query OK, 0 rows affected (0.00 sec)
+    ```
 
 4. 对用户账户重命名
-```
-mysql> RENAME USER tom@localhost to jerry@localhost;
-Query OK, 0 rows affected (0.00 sec)
-```
+    ```
+    mysql> RENAME USER tom@localhost to jerry@localhost;
+    Query OK, 0 rows affected (0.00 sec)
+    ```
 
 5. 删除用户
-```
-mysql> DROP USER jerry@localhost;
-Query OK, 0 rows affected (0.01 sec)
-```
+    ```
+    mysql> DROP USER jerry@localhost;
+    Query OK, 0 rows affected (0.01 sec)
+    ```
 
 6. 修改和重置密码
 
-  * 用`SET PASSWORD`命令修改密码
+    * 用`SET PASSWORD`命令修改密码
+    ```
+    mysql> SET PASSWORD FOR root@localhost = PASSWORD('123456');
+    Query OK, 0 rows affected, 1 warning (0.01 sec)
+    ```
 
-```
-mysql> SET PASSWORD FOR root@localhost = PASSWORD('123456');
-Query OK, 0 rows affected, 1 warning (0.01 sec)
-```
+    * 直接修改user表
 
-  * 直接修改user表
+    ```
+    mysql> UPDATE user SET authentication_string=PASSWORD('123456root') WHERE user='root' and host='localhost';
+    Query OK, 1 row affected, 1 warning (0.00 sec)
+    Rows matched: 1  Changed: 1  Warnings: 1
+    
+    mysql> FLUSH PRIVILEGES;
+    Query OK, 0 rows affected (0.00 sec)
+    ```
 
-```
-mysql> UPDATE user SET authentication_string=PASSWORD('123456root') WHERE user='root' and host='localhost';
-Query OK, 1 row affected, 1 warning (0.00 sec)
-Rows matched: 1  Changed: 1  Warnings: 1
+    * 在未登录mysql的情况下用mysqladmin命令修改密码
+    ```
+    $ mysqladmin -uroot -p123456root password 123321
+    ```
 
-mysql> FLUSH PRIVILEGES;
-Query OK, 0 rows affected (0.00 sec)
-```
+    * 在丢失root密码的时候
 
-  * 在未登录mysql的情况下用mysqladmin命令修改密码
-```
-$ mysqladmin -uroot -p123456root password 123321
-```
-
-  * 在丢失root密码的时候
-
-关闭mysql服务（根据你自己的操作系统自行关闭），然后跳过权限认证启动mysql服务
-```
-$ mysqld_safe --skip-grant-tables &   
-```
+    关闭mysql服务（根据你自己的操作系统自行关闭），然后跳过权限认证启动mysql服务
+    ```
+    $ mysqld_safe --skip-grant-tables &   
+    ```
  
-无密码登陆
-```
-$ mysql -uroot
-```
-进入之后使用上面直接修改user表的方法修改root用户的密码
-
-最后杀掉`mysqld_safe`和`mysqld`的进程
-
-重新启动mysql服务，用新的密码登陆吧。
+    无密码登陆
+    ```
+    $ mysql -uroot
+    ```
+    进入之后使用上面直接修改user表的方法修改root用户的密码
+    
+    最后杀掉`mysqld_safe`和`mysqld`的进程
+    
+    重新启动mysql服务，用新的密码登陆吧。
 
 
 
