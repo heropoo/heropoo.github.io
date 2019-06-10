@@ -167,7 +167,6 @@ mysql> desc user;
     ```
 
     * 直接修改user表
-
     ```
     mysql> UPDATE user SET authentication_string=PASSWORD('123456root') WHERE user='root' and host='localhost';
     Query OK, 1 row affected, 1 warning (0.00 sec)
@@ -178,13 +177,11 @@ mysql> desc user;
     ```
 
     * 在未登录mysql的情况下用mysqladmin命令修改密码
-    
     ```
     $ mysqladmin -uroot -p123456root password 123321
     ```
 
     * 在丢失root密码的时候
-
     关闭mysql服务（根据你自己的操作系统自行关闭），然后跳过权限认证启动mysql服务
     ```
     $ mysqld_safe --skip-grant-tables &   
