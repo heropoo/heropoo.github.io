@@ -158,14 +158,14 @@ Query OK, 0 rows affected (0.01 sec)
 
 6. 修改和重置密码
 
-* 用`SET PASSWORD`命令修改密码
+  * 用`SET PASSWORD`命令修改密码
 
 ```
 mysql> SET PASSWORD FOR root@localhost = PASSWORD('123456');
 Query OK, 0 rows affected, 1 warning (0.01 sec)
 ```
 
-* 直接修改user表
+  * 直接修改user表
 
 ```
 mysql> UPDATE user SET authentication_string=PASSWORD('123456root') WHERE user='root' and host='localhost';
@@ -176,12 +176,12 @@ mysql> FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.00 sec)
 ```
 
-* 在未登录mysql的情况下用mysqladmin命令修改密码
+  * 在未登录mysql的情况下用mysqladmin命令修改密码
 ```
 $ mysqladmin -uroot -p123456root password 123321
 ```
 
-* 在丢失root密码的时候
+  * 在丢失root密码的时候
 
 关闭mysql服务（根据你自己的操作系统自行关闭），然后跳过权限认证启动mysql服务
 ```
