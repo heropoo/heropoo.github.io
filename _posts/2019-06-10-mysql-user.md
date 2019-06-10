@@ -157,6 +157,7 @@ Query OK, 0 rows affected (0.01 sec)
 ```
 
 6. 修改和重置密码
+
 * 用`SET PASSWORD`命令修改密码
 
 ```
