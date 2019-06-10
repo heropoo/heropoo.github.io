@@ -158,11 +158,14 @@ Query OK, 0 rows affected (0.01 sec)
 
 6. 修改和重置密码
 * 用`SET PASSWORD`命令修改密码
+
 ```
 mysql> SET PASSWORD FOR root@localhost = PASSWORD('123456');
 Query OK, 0 rows affected, 1 warning (0.01 sec)
 ```
+
 * 直接修改user表
+
 ```
 mysql> UPDATE user SET authentication_string=PASSWORD('123456root') WHERE user='root' and host='localhost';
 Query OK, 1 row affected, 1 warning (0.00 sec)
