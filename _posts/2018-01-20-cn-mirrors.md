@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "整理几个常用的国内源"
+title:  "整理几个常用的国内源（持续更新）"
 date:   2018-01-20 22:20:41
 author: "Heropoo"
 categories: 
@@ -14,6 +14,8 @@ tags:
     - Go
 excerpt: "整理几个常用的国内源"
 ---
+
+最后更新：2019-11-17
 
 ### Linux以及一些开源软件
 
