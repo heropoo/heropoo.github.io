@@ -37,11 +37,13 @@ excerpt: "整理几个常用的国内源"
 * 淘宝NPM镜像 [http://npm.taobao.org/](http://npm.taobao.org/)
 
 ### php composer
-* Composer中文网 [http://www.phpcomposer.com/](http://www.phpcomposer.com/)
+* 阿里云：https://developer.aliyun.com/composer
 * LaravelChina社区提供的镜像地址： https://packagist.laravel-china.org
+* 安畅网络：https://php.cnpkg.org/
+* Composer中文网： https://pkg.phpcomposer.com/
 
 ### Docker
-* DaoCloud [http://a42abd64.m.daocloud.io](http://a42abd64.m.daocloud.io)
+* DaoCloud [传送门](https://www.daocloud.io/mirror)
 * 阿里云 要注册独立分配 [传送门](https://yq.aliyun.com/articles/29941)
 
 大概就整理这么多了，至于各个镜像的更换方法大家根据自己的应用自行百度吧~
