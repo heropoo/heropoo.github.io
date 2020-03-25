@@ -14,7 +14,7 @@ excerpt: "Composer官方镜像太慢或者被墙无法使用时的几种解决�
 Composer官方镜像太慢或者被墙无法使用时的几种解决方案
 
 ### 使用代理
-被墙使用国外代理上网，总是一种行之有效的方法。加入你使用shadowsocks代理，开启之后默认的本地端口是1080。只要设置两个环境变量`http_proxy`和`https_proxy`就可以使用了。
+被墙使用国外代理上网，总是一种行之有效的方法。假如你使用shadowsocks代理，开启之后默认的本地端口是1080。只要设置两个环境变量`http_proxy`和`https_proxy`就可以使用了。
 
 Mac OS / Linux 终端
 ```bash
