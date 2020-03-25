@@ -30,6 +30,7 @@ set https_proxy=127.0.0.1:1080
 这样就可以了，愉快的下载各种包吧~
 
 ### 使用国内镜像地址
+> * 阿里云提供的镜像地址(推荐)：https://developer.aliyun.com/composer
 > * cnpkg提供的镜像地址： https://php.cnpkg.org
 > * LaravelChina社区提供的镜像地址： https://packagist.laravel-china.org
 > * Composer中文网提供的镜像地址： https://packagist.phpcomposer.com
@@ -38,12 +39,7 @@ set https_proxy=127.0.0.1:1080
 
 全局配置（推荐）:
 ```
-composer config -g repo.packagist composer https://php.cnpkg.org
-```
-
-单独项目使用：
-```
-composer config repo.packagist composer https://php.cnpkg.org
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 
 取消镜像：
@@ -51,5 +47,15 @@ composer config repo.packagist composer https://php.cnpkg.org
 composer config -g --unset repos.packagist
 ```
 
----- 最后更新时间： 2019-03-18 15:09:53
+在单独项目中使用：
+```
+composer config repo.packagist composer https://mirrors.aliyun.com/composer/
+```
+
+在单独项目中取消配置：
+```
+composer config --unset repos.packagist
+```
+
+---- 最后更新时间： 2020-03-25 10:02
 
