@@ -75,6 +75,7 @@ echo serialize([1]);
 ```
 
 7. 对象object
+
 ```php
 class A{}
 $a = new A();
