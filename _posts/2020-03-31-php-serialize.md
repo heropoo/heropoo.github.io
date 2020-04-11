@@ -101,6 +101,7 @@ echo serialize($d);
 ```
 
 8. 资源resource
+
 ```php
 $f = fopen("/tmp/t.txt", "r");  //假如文件/tmp/t.txt存在
 echo serialize($f);
