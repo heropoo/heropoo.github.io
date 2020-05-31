@@ -26,6 +26,7 @@ sidebar_link: true
     <li><a href="https://metmoon.com/" target="_blank" title="满江风雪"><img src="/favicon.png" alt="满江风雪"> &nbsp;<span>满江风雪</span></a></li>	
     <li><a href="http://zhongguose.com/" target="_blank" title="中国色"><img src="http://zhongguose.com/img/favicon.ico" alt="中国色"> &nbsp;<span>中国色</span></a></li>	
     <li><a href="https://morvanzhou.github.io/" target="_blank" title="莫烦Python"><img src="http://zhongguose.com/img/favicon.ico" alt="中国色"> &nbsp;<span>莫烦Python</span></a></li>    
+    <li><a href="https://www.ioio.pw/learning-go/" target="_blank" title="开始学习Go语言"><img src="/favicon.png" alt="开始学习Go语言"> &nbsp;<span>开始学习Go语言</span></a></li>    
 </ul>
 
 
