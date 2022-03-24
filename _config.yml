@@ -37,8 +37,8 @@ keywords:         www.ioio.pw, ioio.pw, ioio, 满江风雪, heropoo, 博客, 个
 disqus:
   shortname:      heropoo
 
-youyan:
-  uid:            2143551
+#youyan:
+#  uid:            2143551
 
 # Custom vars
 version:            1.0
