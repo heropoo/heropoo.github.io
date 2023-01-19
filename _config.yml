@@ -7,15 +7,15 @@ title:            "满江风雪"
 tagline:          "Heropoo的个人博客"
 say_something:    "时光漫漫，何妨扬眉淡笑，心境从容？"
 description:      "满江风雪，Heropoo的个人博客。"
-url:              http://www.ioio.pw
+url:              https://forever.run
 baseurl:          # the optional subpath of your site, e.g. "/blog"
-domain:           www.ioio.pw
+domain:           forever.run
 
 timezone:         '+0800'
 
 author:
   name:           Heropoo
-  url:            http://www.ioio.pw
+  url:            https://forever.run
 
 paginate:         15
 
@@ -32,7 +32,7 @@ sass:
 # for `jekyll-seo-tag`
 logo:             favicon.png
 lang:             zh-CN 
-keywords:         www.ioio.pw, ioio.pw, ioio, 满江风雪, heropoo, 博客, 个人博客, Heropoo的个人博客, heropoo博客
+keywords:         forever.run, 满江风雪, heropoo, 博客, 个人博客, Heropoo的个人博客, heropoo博客
 # Comments
 disqus:
   shortname:      heropoo
