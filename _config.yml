@@ -11,7 +11,7 @@ url:              https://forever.run
 baseurl:          # the optional subpath of your site, e.g. "/blog"
 domain:           forever.run
 
-timezone:         '+0800'
+#timezone:         '+0800'
 
 author:
   name:           Heropoo
